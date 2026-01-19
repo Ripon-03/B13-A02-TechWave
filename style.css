@@ -67,7 +67,7 @@ header hr {
   max-width: 1600px;
 }
 
-/* Header Banner */
+/* Header Banner Section */
 .banner{
     background: 
     url("./assets/hero-circle.png"),
@@ -75,28 +75,39 @@ header hr {
 
     background-repeat: 
     no-repeat, no-repeat;
-    background-position: center, center;
+
+    background-position: 
+    center 101px,
+    center center;
+    
     background-size: cover cover;
     height: 760px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
  }
  .banner img{
     max-width: 200px;
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50% , -110%);
+    /* position: static;
+    transform: none; */
  } 
  .btn-green{
-    background: green;
-    color: #ffffff;
+    background: #00FF88;
+    color: #1A0B2E;
     padding: 12px 20px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     border: none;
     box-shadow: 5px 5px 15px 0px rgba(70, 255, 30, 0.3);
     position: relative;
-    top: 50%;
+    top: 38%;
     left: 48%;
     transform: translateY(-700%);
  }
@@ -111,8 +122,27 @@ header hr {
  }
  .banner-bottom{
     width: 100%;
-    margin-top: 400px;
-    margin-left: 700px;
+    max-width: 550px;
+    height: 168px;
+    margin: 300px auto;
+ }
+ .banner-bottom h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 900;
+ }
+ .banner-bottom p{
+    font-size:16px;
+    color: #ffffff;
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+ }
+ .header-banner-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
  }
 
  
@@ -129,15 +159,11 @@ header hr {
 
 
 .about-info{
-    /* display: flex;
-    justify-content: space-between; */
-    /* border: 1px solid blue; */
     width: 100%;
     max-width: 1200px;
     height: 220px;
     margin: 0 auto;
     text-align: center;
-    /* margin-top: 50px; */
 }
 
 .about-info h1{
@@ -200,10 +226,8 @@ header hr {
 }
 
 .choose-container{
-    /* border: 1px solid red; */
     width: 100%;
     max-width: 1600px;
-    /* height: 1121px; */
     margin: 0px auto;
     background-color: #230E3D;
 
@@ -214,14 +238,13 @@ header hr {
 
 
 .choose-info-container{
-    /* border: 1px solid red; */
     width: 100%;
     max-width: 1200px;
-    /* height: 783px; */
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     gap: 30px;
 }
+
 /* Choose Card One */
 .choose-card-one{
     background-color: #351165;
@@ -246,10 +269,8 @@ header hr {
     font-size: 16px;
     max-width: 300px;
     margin-left: 40px;
-    margin-bottom: 107px; */
+    margin-bottom: 107px;
 } 
-
-
 
 /* Choose Card Two */
 .choose-card-two{
@@ -278,7 +299,6 @@ header hr {
     margin-left: 40px;
     margin-bottom: 40px;
 } 
-
 
 
 /* Choose Card Three */
@@ -365,12 +385,9 @@ header hr {
 } 
 
 
-
-
 /* Featured Section */
 
 .featured-container{
-    /* border: 1px solid red; */
     width: 100%;
     max-width: 1600px;
     height: 1276px;
@@ -458,13 +475,6 @@ header hr {
     margin-left: 24px;
     margin-right: 24px;
 }
-.time{
-    color: #00FF88;
-    font-size: 16px;
-    font-weight: 600;
-    
-}
-
   /* Featured Card Three */
 
  .featured-card-three{
@@ -491,12 +501,6 @@ header hr {
     margin-left: 24px;
     margin-right: 24px;
 }
-.time{
-    color: #00FF88;
-    font-size: 16px;
-    font-weight: 600;
-    
-}
 
 
   /* Featured Bottom Section */
@@ -510,8 +514,6 @@ header hr {
 }
 
 .featured-bottom-card{
-
-    /* border: 1px solid red; */
     width: 100%;
     max-width: 1200px;
     height:280px;
@@ -534,7 +536,6 @@ header hr {
   }
 
    .featured-bottom-card-two{
-    /* border: 1px solid red; */
     width: 100%;
     max-width: 896px;
     height: 183px;
@@ -554,9 +555,9 @@ header hr {
     height: 72px;
   }
   .social-logos{
-    border: 1px solid tomato;
-    max-width: 184px;
-    height: 40px;
+    display: flex;
+    gap: 10px;
+    height: auto;
     margin-top: 16px;
   }
   .social-logos img{
@@ -573,7 +574,6 @@ header hr {
     width: 100%;
     max-width: 1600px;
     height: 412px;
-    /* border: 2px solid blue; */
     background: url(./assets/footer-bg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -584,7 +584,6 @@ header hr {
     width: 100%;
     max-width: 1360px;
     height: 172px;
-    /* border: 1px solid red; */
     padding-top: 130px;
 }
  .footer-title h1{
@@ -592,29 +591,24 @@ header hr {
     font-weight: 700;
     color: #ffffff;
     text-align: center;
-    /* margin-bottom: 32px; */
  }
+
  .footer-social-logos{
     display: flex;
     justify-content: center;
     gap: 10px;
-    /* gap: 30px; */
-    /* align-items: center;  */
  }
 
  .footer-logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    /* gap:30 px; */
  }
  .footer-logo img, .footer-logo p{
     padding: 20px;
     color: white;
-    /* width: 100%;
-    max-width: 544px; */
  }
+
  .footer-copy{
     color: white;
     text-align: center;
