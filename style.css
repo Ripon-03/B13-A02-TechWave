@@ -62,6 +62,9 @@ li a{
     font-weight: 600;
     border: none;
 }
+.btn:hover{
+    cursor: pointer;
+}
 
 header hr {
   border: none;
@@ -87,11 +90,6 @@ header hr {
     
     background-size: cover cover;
     height: 760px;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
  }
  .banner img{
     max-width: 200px;
@@ -123,6 +121,11 @@ header hr {
     color: green;
     background: transparent;
  }
+  .subscribe-btn:hover{
+    cursor: pointer;
+    background-color: #00FF88;
+    color: #1A0B2E;
+  }
  .banner-bottom{
     width: 100%;
     height: auto;
@@ -661,6 +664,10 @@ nav h1{
 
  
 @media screen and (max-width: 576px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
   
     nav {
         padding: 15px 20px;
@@ -683,27 +690,42 @@ nav h1{
         width: 30px; 
     }
 
-   
     .banner {
-        height: auto;
-        padding-bottom: 24px;
-        background-size: 200px;
+       height: auto;
+       padding-bottom: 24px; 
+       background-size: 200px;
+       background-position: 
+       center 40px,
+       center 60px;
+       background-size: 200px, 100%;
+
+        
     }
 
     .banner img {
         max-width: 80px; 
-        transform: translate(-50%, 112%);
+        transform: translate(-50%, 80px);
     }
 
     .btn-green {
         top: 25%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-30%, -25px);
     }
 
     .banner-bottom h1 {
         font-size: 36px;
+        padding: 10px;
     }
+
+   .banner-bottom{
+    padding: 10px;
+    margin: 100px auto;
+ }
+
+ .banner-bottom p{
+    padding: 10px;
+ } 
 
     .about-cards {
         display: grid;
@@ -742,6 +764,26 @@ nav h1{
         text-align: center;
         padding: 20px;
     }
+    
+    
+    .featured-bottom-caption h1{
+    margin: 35px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.featured-bottom-card{
+    width: 100%;
+    height:auto;
+
+    }
+
+   .featured-bottom-card-two{
+    width: 100%;
+    height: auto;
+    gap: 10px;
+
+  }
 
     .social-logos {
         justify-content: center;
