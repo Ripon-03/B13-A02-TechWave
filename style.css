@@ -45,6 +45,9 @@ li a{
     text-decoration: none;
     color: #ffffff;
 }
+#hamburger-menu{
+    display: none;
+}
 .btn{
     background: linear-gradient(
         to top right,
@@ -96,9 +99,7 @@ header hr {
     top: 50%;
     left: 50%;
     transform: translate(-50% , -110%);
-    /* position: static;
-    transform: none; */
- } 
+ }
  .btn-green{
     background: #00FF88;
     color: #1A0B2E;
@@ -618,7 +619,145 @@ header hr {
     margin-top: 12px;
  }
 
+/* CSS SECTION ENDS HERE */
+
+/* ANIMATION LOGO */
+nav h1{
+    animation: logoMove 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes logoMove{
+    from{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ANIMATION BUTTON */
+.btn{
+    opacity: 0;
+    animation: btnMove 0.8s ease forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes btnMove{
+    from{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
  /* RESPONSIVE FOR SM DEVICES(MW 576PX) STARTS HERE*/
+
+ 
+@media screen and (max-width: 576px) {
+  
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul li:not(#hamburger-menu) {
+        display: none;
+    }
+
+    nav .btn {
+        display: none; 
+    }
+
+    #hamburger-menu {
+        display: block;
+        padding-right: 20px; 
+    }
+
+    #hamburger-menu img {
+        width: 30px; 
+    }
+
+   
+    .banner {
+        height: auto;
+        padding-bottom: 24px;
+        background-size: 200px;
+    }
+
+    .banner img {
+        max-width: 80px; 
+        transform: translate(-50%, 112%);
+    }
+
+    .btn-green {
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .banner-bottom h1 {
+        font-size: 36px;
+    }
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .choose-info-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .choose-card-one, 
+    .choose-card-two, 
+    .choose-card-three, 
+    .choose-card-four, 
+    .choose-card-five {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    .choose-featured-card {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 20px;
+    }
+
+    .featured-card-one,
+    .featured-card-two, 
+    .featured-card-three {
+        max-width: 100%;
+    }
+
+    .featured-bottom-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .social-logos {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 60px 20px;
+    }
+
+    .footer-title h1 {
+        font-size: 32px;
+    }
+
+    .footer-social-logos {
+        flex-wrap: wrap;
+    }
+}
  
  
