@@ -197,7 +197,7 @@ header hr {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+   max-width: 1200px;
     margin: 80px auto;
     color: #ffffff;
     text-align: center;
@@ -419,7 +419,7 @@ header hr {
 
 .choose-featured-card{
     width: 100%;
-    max-width: 1200px;
+    padding: 0 200px;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -560,7 +560,7 @@ header hr {
     font-size: 16px;
     line-height: 24px;
     margin-top: 16px;
-    max-width: 896px;
+    /* max-width: 896px; */
     height:auto;
   }
   .social-logos{
@@ -727,7 +727,7 @@ nav h1{
     padding: 10px;
  } 
 
-    .about-cards {
+ .about-cards {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
@@ -746,6 +746,18 @@ nav h1{
         grid-column: span 1;
         grid-row: auto;
     }
+
+    .featured-caption h1{
+   margin: 35px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.choose-caption h1{
+   margin: 35px;
+    font-size: 32px;
+
+}
 
     .choose-featured-card {
         flex-direction: column;
@@ -801,5 +813,59 @@ nav h1{
         flex-wrap: wrap;
     }
 }
+
+/* LARGE SCREEN / MW 992PX */
+
+
+@media screen and (min-width: 992px) {
+  
+    nav,
+    .choose-info-container,
+    .choose-featured-card,
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
+    .banner {
+        height: 800px;
+    }
+
+    .banner-bottom h1 {
+        font-size: 72px; 
+    }
+
+    
+    .choose-info-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 40px; 
+    }
+
+  
+    .choose-featured-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .featured-card-one,
+    .featured-card-two,
+    .featured-card-three {
+        max-width: 100%; 
+    }
+
+   
+    .featured-card-one:hover,
+    .featured-card-two:hover,
+    .featured-card-three:hover {
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    }
+}
+
  
  
